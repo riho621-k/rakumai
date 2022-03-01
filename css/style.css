@@ -1,0 +1,1389 @@
+/*---------------------------*/
+/*--- DEFAULT-STYLE ---------*/
+/*---------------------------*/
+
+* {
+    padding:0;
+    margin:0;
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    width: 100vw;
+    background-color: #f39700;
+    overflow-x: hidden;
+}
+
+section {
+    font-size: 0;
+}
+
+p , h1, h2, h3, h4, a ,label ,table ,select ,button{
+    display: inline-block;
+    font-size: 3vw;
+    font-weight: bold;
+    line-height: 1.7;
+    font-family: 'umeboshi','游ゴシック体',serif;/*sans-self*/
+    color:rgb(27,20,0);
+}
+
+h2 {
+    font-size: 6vw;
+}
+
+h3 {
+    font-size: 5.6vw
+}
+
+h4 {
+    font-size: 5vw;
+}
+
+p {
+    font-size: 4vw;
+}
+
+a,label {
+    font-size: 4.4vw;
+}
+
+
+select {
+    text-align: center;
+    padding: 2vw;
+    margin: 2vw;
+    border: none;
+    border-radius: 2vw;
+    outline:none;
+    appearance: none;
+    cursor: pointer;
+    background-color: rgba(150,100,0,0.2);
+}
+
+.yellow-h2 {
+    margin: 8vw 8vw 0 8vw;
+    padding-left: 2vw;
+    font-size: 6vw;
+    color: white;
+    border-left: 1.4vw solid yellow;
+}
+
+/* 'Asebi Mincho' 'cinecaption' */
+
+/* ------------------------------------------ */
+/* HEADER */
+/* ------------------------------------------ */
+
+.pc-menu {
+    display: none;
+}
+
+.sp-menu-btn {
+    display: flex;
+    position: fixed;
+    margin: 1vw;
+    top: 2vw;
+    right: 3vw;
+    width: 8vw;
+    height: 8vw;
+    border: none;
+    outline: none;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    z-index: 110;
+}
+
+.sp-menu-line { /* 真ん中線 */
+    position: relative;
+    width: 100%;
+    height: 1vw;
+    background-color: black;
+    /* background-color: rgb(255,35,125); */
+    border-radius: 1vw;
+    transition: .2s;
+}
+
+.sp-menu-line::before,
+.sp-menu-line::after { /* 上と下の線 */
+   content: "";
+   position: absolute;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: black;
+   border-radius: 1vw;
+   transition: .2s; 
+}
+
+.sp-menu-line::before { /* 上線の位置 */
+    transform: translateY(-16px);
+}
+  
+.sp-menu-line::after { /* 下線の位置 */
+    transform: translateY(16px);
+}
+  
+.sp-menu-line.is-active { /* 回って真ん中が消える */
+    transform: rotate(180deg);
+    top: -1vw;
+    background-color: transparent;
+}
+
+.sp-menu-line.is-active::before{
+    transform: rotate(135deg);
+}
+  
+.sp-menu-line.is-active::after {
+    transform: rotate(-135deg);
+}
+
+.sp-menu {
+    position: fixed;
+    top: 0; right: 0;
+    width: 0; height: 100vh;
+    padding-top: 14vw;
+    opacity: 0;
+    transition: .4s;
+    background-color: white;
+}
+
+.sp-menu.is-active {
+    width: 32vw;
+    opacity: 1;
+    z-index: 100;
+}
+
+.sp-menu > a {
+    text-align: right;
+    width: 28vw;
+    padding-top: 6vw;
+    padding-right: 4vw;
+}
+
+/* ------------------------------------------ */
+/* START-SECTION */
+/* ------------------------------------------ */
+
+.start-section {
+    position: relative;
+    top: 0; left: 0;
+    overflow: hidden;
+    height: 240vw;
+}
+
+.start_box {
+    position: relative;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 240vw;
+}
+
+.start_box > img {
+    position: absolute;
+}
+
+.img-top {
+    top: 0; left:0;
+    width: 100vw;
+    opacity: 0.4;
+}
+
+.start_box > h1 {
+    position: absolute;
+    top: 52vw; left: 28vw;
+    z-index: 2;
+}
+
+.img-line-wh-01 {
+    top: 20vw; right: 3vw;
+    width: 30vw;
+}
+
+.img-line-wh-02 {
+    top: 80vw; left: 1vw;
+    width: 40vw;
+}
+
+.img-title {
+    width: 30vw;
+    z-index: 2;
+}
+
+.start-section h2 {
+    position: absolute;
+    top: 36vw; left: 17vw;
+    font-size: 5.6vw;
+}
+
+.start-section h3 {
+    position: absolute;
+    top: 98vw; left: 52vw;
+    font-size: 5.6vw;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.img-tubu-02 {
+    top: 36vw; right: 4vw;
+    width: 18vw;
+}
+
+.img-tyawan {
+    top: 150vw; left: 14vw;
+    width: 46vw;
+}
+
+.img-hasi {
+    top: 136vw; left: 33vw;
+    width: 80vw;
+    transition: 0.4s;
+    z-index: 10;
+}
+
+/* ------------------------------------------ */
+/* YUGE WRAP - 湯気のもくもくアニメ等 */
+/* ------------------------------------------ */
+
+.yuge-wrap {
+    width: 100%;
+    height: 240vw;
+}
+
+.yuge-wrap img {
+    position: absolute;
+    width: 0;
+    top: 0; left: 0;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
+}
+
+.img-yuge-01-once {
+    animation-duration: 7s;
+    animation-name: yuge-01-once-anime;
+    animation-iteration-count: 1;
+}
+
+@keyframes yuge-01-once-anime {
+    0% { width: 30vw; top: 100vw; left: 22vw; opacity: 0.6; }
+    50% { opacity: 0.6; }
+    100% { width: 54vw; top: 30vw; left: 16vw; opacity: 0; }
+}
+
+.img-yuge-02-once {
+    animation-duration: 5s;
+    animation-name: yuge-02-once-anime;
+}
+
+@keyframes yuge-02-once-anime {
+    0% { width: 30vw; top: 100vw; left: 34vw; opacity: 0.4; }
+    50% { opacity: 0.6; }
+    100% { width: 50vw; top: 30vw; left: 19vw; opacity: 0; }
+}
+
+.img-yuge-01-repeat {
+    animation-duration: 10s;
+    animation-name: yuge-01-repeat-anime;
+    animation-iteration-count: infinite;
+}
+
+@keyframes yuge-01-repeat-anime {
+    0% { width: 0; top: 150vw; left: 28vw; opacity: 0; }
+    50% { opacity: 0.6; }
+    80% { width: 50vw; }
+    100% { width: 60vw; top: 30vw; left: 21vw; opacity: 0; }
+}
+
+.img-yuge-02-repeat {
+    animation-duration: 16s;
+    animation-name: yuge-02-repeat-anime;
+    animation-iteration-count: infinite;
+}
+
+@keyframes yuge-02-repeat-anime {
+    0% { width: 0; top: 148vw; left: 37vw; opacity: 0; }
+    50% { opacity: 0.6; }
+    80% { width: 45vw; }
+    100% { width: 50vw; top: 30vw; left: 24vw; opacity: 0; }
+}
+
+.img-yuge-03-repeat {
+    animation-duration: 13s;
+    animation-name: yuge-03-repeat-anime;
+    animation-iteration-count: infinite;
+}
+
+@keyframes yuge-03-repeat-anime {
+    0% { width: 0; top: 142vw; left: 36vw; opacity: 0; }
+    50% { opacity: 0.6; }
+    80% { width: 53vw; }
+    100% { width: 55vw; top: 28vw; left: 20vw; opacity: 0; }
+}
+
+.img-yuge-04-repeat {
+    animation-duration: 9s;
+    animation-name: yuge-04-repeat-anime;
+    animation-iteration-count: infinite;
+}
+
+@keyframes yuge-04-repeat-anime {
+    0% { width: 0; top: 140vw; left: 35vw; opacity: 0; }
+    50% { opacity: 0.6; }
+    80% { width: 38vw; }
+    100% { width: 45vw; top: 30vw; left: 28vw; opacity: 0; }
+}
+
+.img-yuge-05-repeat {
+    animation-duration: 25s;
+    animation-name: yuge-05-repeat-anime;
+    animation-iteration-count: infinite;
+}
+
+@keyframes yuge-05-repeat-anime {
+    0% { width: 0; top: 140vw; left: 35vw; opacity: 0; }
+    50% { opacity: 0.6; }
+    80% { width: 38vw; }
+    100% { width: 45vw; top: 30vw; left: 28vw; opacity: 0; }
+}
+
+.img-yuge-06-repeat {
+    animation-duration: 30s;
+    animation-name: yuge-05-repeat-anime;
+    animation-iteration-count: infinite;
+}
+
+@keyframes yuge-06-repeat-anime {
+    0% { width: 0; top: 140vw; left: 35vw; opacity: 0; }
+    50% { opacity: 0.6; }
+    80% { width: 38vw; }
+    100% { width: 45vw; top: 30vw; left: 28vw; opacity: 0; }
+}
+
+/* ------------------------------------------ */
+/* SECTION 1 無洗米とは */
+/* ------------------------------------------ */
+
+
+.section-1 > div {
+    text-align: center;
+    position: relative;
+    width: 86vw;
+    margin: 0 7vw 12vw 7vw;
+    padding: 0 0 6vw 0;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 4vw;
+}
+
+.section-1 h2 {
+    margin-bottom: 8vw;
+}
+
+.section-1 h3 {
+    position: absolute;
+    width: 17vw;
+    top: 4vw; left: 4vw;  
+    padding: 5.6vw 0;
+    font-size: 3vw;
+    color: white;
+    background-color: rgb(255,35,125);
+    border-radius: 17vw;
+    z-index: 0;
+}
+
+.section-1 img {
+    width: 30vw;
+    margin: 14vw auto 8vw auto;
+}   
+
+.section-1 p {
+    padding: 0 4vw 4vw 4vw;
+}
+
+/* ------------------------------------------ */
+/* SECTION 2 らくまいの良さ */
+/* ------------------------------------------ */
+
+.section-2 table {
+    text-align: left;
+    margin: 4vw;
+    font-size: 4vw;
+    border-spacing: 2vw;
+}
+
+.section-2 td {
+    padding: 2vw;
+    background-color: rgba(255,255,255,0.6);
+    border-radius: 3vw;
+}
+
+.section-2 td:nth-child(odd) {
+    background-color: rgba(255,255,255,0.4);
+}
+
+.section-2 th {
+    padding-left: 2vw;
+    width: 70%;
+}
+
+.section-2 th:nth-child(odd) {
+    width: 30%;
+}
+
+/* ------------------------------------------ */
+/* SECTION 3 商品一覧 */
+/* ------------------------------------------ */
+
+.section-3 {
+    background-color: rgba(255,240,240,0.6);
+    padding-bottom: 16vw;
+}
+
+.section-3 div {
+    text-align: center;
+    width: 82vw;
+    margin: 8vw 0 0 5vw;
+    padding: 0 4vw 8vw 4vw;
+    border: 0.4vw dotted #f39700;
+    border-top: 4px solid #f39700;
+    border-radius: 8vw;
+    background-image: linear-gradient(180deg, #f39700 0 20vw, rgba(255,255,255,0.4) 20vw 100%);
+}
+
+.section-3 h3 {
+    padding: 1vw 2vw;
+    font-size: 5.6vw;
+    color: white;
+}
+
+.section-3 h4 {
+    padding: 1vw 2vw;
+}
+
+.section-3 > div > img {
+    display: block;
+    width: 30vw;
+    margin: 12vw auto;
+}
+
+.table-yellow {
+    width: 100%;
+    margin: 4vw 0;
+    font-size: 4.2vw;
+    border-spacing: 2vw;
+}
+
+.table-yellow td {
+    padding: 2vw;
+    border-radius: 3vw;
+}
+
+.table-yellow td:nth-child(odd) {
+    background-color: yellow;
+}
+
+.table-yellow th {
+    width: 60%;
+    padding-left: 2vw;
+    border-radius: 3vw;
+    background-color: orange;
+}
+
+.table-yellow th:nth-child(odd){
+    width: 40%;
+}
+
+.table-yellow.td-border td {
+    background-color: rgba(255,255,255,0.4);
+    border: 1px solid orange;
+}
+
+.section-3 button {
+    text-align: center;
+    width: 30vw;
+    margin: 2vw 22vw;
+    padding: 2vw;
+    background-color: white;
+    border-radius: 8vw;
+    border: none;
+}
+
+.section-3 > p {
+    width: 84vw;
+    margin: 0;
+    padding-left: 8vw;
+    color: white;
+
+}
+
+.section-3 > div > p {
+    width: calc(100% - 8vw);
+    padding: 4vw;
+}
+
+.section-3 span {
+    font-size: 3vw;
+    font-weight: normal;
+}
+
+/* ------------------------------------------ */
+/* SECTION 4 クチコミ */
+/* ------------------------------------------ */
+
+.sec4-wrap {
+    overflow-x: scroll;
+    display: flex;
+    padding: 2vw;
+}
+
+.sec4-wrap div {
+    display: inline-block;
+    margin: 4vw 4vw 0 4vw;
+    padding: 4vw;
+    background-color: white;
+    border-radius: 1vw;
+    box-shadow: 1px 3px rgba(0,0,0,0.2);
+}
+
+.sec4-wrap h3, p {
+    width: 50vw;
+}
+
+.section-4 > a {
+    text-align: right;
+    width: 92vw;
+    margin: 4vw  2vw;
+    padding: 2vw;
+}
+
+/* ------------------------------------------ */
+/* FOOTER */
+/* ------------------------------------------ */
+
+footer {
+    background-color: white;
+}
+
+footer a {
+    display: inline-block;
+    width: 92vw;
+    padding: 4vw;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+footer p {
+    padding: 4vw;
+    color: gray;
+    font-size: 3vw;
+}
+
+/* ------------------------------------------ */
+/* FIXED BAG */
+/* ------------------------------------------ */
+
+.fixed-bag {
+    display: none;
+    position: fixed;
+    top: 4vw; left: 4vw;
+    transition: 1s;
+}
+
+.kurt_btn {
+    background-color: orange;
+    border-radius: 1vw;
+    box-shadow: 2px 0.6vw rgba(0,0,0,0.2);
+}
+
+.fixed-bag img {
+    display: inline-block;
+    width: 5vw;
+    padding: 2vw 2vw 0 2vw;
+}
+
+.fixed-bag span {
+    color: red;
+    font-size: 3vw;
+    padding: 1vw;
+}
+
+.kurt_box > button {
+    display: none;
+    margin-top: 1vw;
+    padding: 1vw;
+    outline: none;
+    border: none;
+    border-radius: 1vw;
+    background-color: white;
+}
+
+.kurt_box{
+    position: fixed;
+    width: 40vw;
+    top: 4vw; left: 14vw;
+    padding: 0;
+    opacity: 0;
+    /* display: none; */
+}
+
+
+.kurt_anime_class {
+    animation-duration: 4s;
+    animation-name: kurt_anime;
+    animation-iteration-count: unset;
+    animation-fill-mode: forwards;
+}
+
+@keyframes kurt_anime {
+    0% {
+        top: 4vw;
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    98% {
+        top: 4vw;
+        opacity: 0;
+    }
+    100%{
+        top: -100vw;
+        opacity: 0;
+    }
+}
+/* ------------------------------------------ */
+/* SUBMIT.HTML----------------------------------------------- */
+/* ------------------------------------------ */
+/* SUBMIT-ITEM 注文内容 */
+/* ------------------------------------------ */
+
+.submit_html {
+    opacity: 1;
+}
+
+.submit-html label {
+    display: inline;
+    width: 100%;
+}
+
+.submit-html input {
+    width: calc(100% - 4vw);
+    margin-bottom: 6vw;
+    padding: 2vw;
+    font-size: 3vw;
+    border: none;
+    background-color: rgba(255,255,255,0.4);
+    border-radius: 2vw;
+}
+
+.submit-html input:focus {
+    outline: none;
+    background-color: rgba(255,255,255,0.8);
+}
+
+.submit-html input[type='submit'] {
+    width: calc(40% - 4vw);
+    margin: 4vw 30vw;
+    padding: 4vw;
+    background-color: white;
+    border-radius: 4vw;
+}
+
+.submit-item-sec > h1{
+    width: 88vw;
+    padding: 6vw 0 0 6vw; 
+    font-size: 6vw;
+}
+
+.submit-item-sec > div {
+    width: 84vw;
+    margin: 2vw 6vw;
+    padding: 2vw;
+    background-color: white;
+    border-radius: 2vw;
+}
+
+.login-sec {
+    margin-top: 8vw; 
+    padding: 0 6vw;   
+}
+
+.submit-html h2 {
+    padding-bottom: 4vw;
+    font-size: 5vw;
+}
+
+.login-sec a {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 3vw;
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+
+.submit-form {
+    background-color: white;
+    width: 88vw;
+    margin-top: 8vw;
+    padding: 6vw;
+}
+
+.submit-form input {
+    border: 2px solid orange;
+}
+
+.submit-form span {
+    padding-right: 2vw;
+    color: pink;
+}
+
+.submit-form a {
+    width: 20vw;
+    padding: 3vw;
+    color: white;
+    background-color: orange;
+    border-radius: 2vw;
+}
+
+
+/* PC  */
+/* PC  */
+/* PC  */
+/* PC  */
+/* PC  */
+
+@media screen and (min-width: 768px) {
+    
+    h2 {
+        font-size: 2.6vw;
+    }
+    
+    h3 {
+        font-size: 2vw
+    }
+    
+    h4 {
+        font-size: 1.8vw;
+    }
+    
+    p ,a ,label ,input ,select ,button{
+        font-size: 1.8vw;
+    }
+    
+    select {
+        display: block;
+        text-align: center;
+        padding: 1vw;
+        margin: 1vw auto 0 auto;
+        font-size: 1.4vw;
+        border: none;
+        border-radius: 1vw;
+        outline:none;
+        appearance: none;
+        cursor: pointer;
+        background-color: rgba(150,100,0,0.2);
+    }
+
+    .yellow-h2 {
+        position: sticky;
+        top: 4vw;
+        margin: 0;
+        padding: 0.2vw 2vw;
+        font-size: 2.4vw;
+        color: white;
+        border-left: 1vw solid yellow;
+        text-shadow: 1px 3px  rgba(0,0,0,0.2);
+        z-index: 99;
+    }
+    
+    .section-right  {
+        display: block;
+        width: 58vw;
+        margin: 10vh 0 4vw 36vw;
+        padding-right: 6vw;
+    }
+
+    .pc-none-br {
+        display: none;
+    }
+
+    /* 'Asebi Mincho' 'cinecaption' */
+    
+    /* ------------------------------------------ */
+    /* HEADER */
+    /* ------------------------------------------ */
+    
+    .sp-menu-btn {
+        display: none;
+    }
+
+    .pc-menu {
+        display: block;
+        position: fixed;
+        top: 0; left: 0;
+        width: 100vw;
+        height: 4.4vw;
+        background-color: #f39700;
+        border-bottom: 1px solid white;
+        z-index: 100;
+    }
+
+    .pc-menu > h2 {
+        font-size: 2vw;
+        margin: 0 40vw 0 2vw;
+        color: white;
+        text-shadow: 1px 3px rgba(0,0,0,0.2); 
+    }
+
+    .pc-menu > a {
+        margin: 0.2vw 0;
+        padding: 0.4vw 2vw;
+        color: white;
+        border-radius: 0.4vw;
+        text-shadow: 1px 3px rgba(0,0,0,0.1); 
+    }
+
+    .pc-menu > a:hover {
+        padding: calc(0.4vw - 2px) 2vw;
+        border-top: 2px solid rgba(0,0,0,0.2);
+        background-color: rgba(0,0,0,0.2);
+    }
+    
+    /* ------------------------------------------ */
+    /* START-SECTION */
+    /* ------------------------------------------ */
+    
+    .start-section {
+        position: fixed;
+        top: 0;
+        width: 36vw;
+        height: 100vh;
+        z-index: 80;
+        overflow: hidden;
+        background-color: #f39700;
+    }
+
+    .start_box {
+        width: 36vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+    
+    .img-top, .img-line-wh-01, .img-hasi ,.start_box > h2 ,.start_box > h3{
+        display: none;
+    }
+    
+    .start_box > h1 {
+        top: 24vh; left: 12vw;
+        bottom: 0;
+    }
+
+    .img-line-wh-02 {
+        top: auto;
+        bottom: 1vh; left: 1vw;
+        width: 10vw
+        /* mienai */
+    }
+    
+    .img-title {
+        width: 20vh;
+    }
+    
+    .img-tubu-02 {
+        top: auto;
+        bottom: 2vh; left: 3vh;
+        width: 6vw;
+    }
+    
+    .img-tyawan {
+        top: auto;
+        bottom: 5vh; left: 10vw;
+        width: 27vh;
+    }
+    
+    /* ------------------------------------------ */
+    /* YUGE WRAP - 湯気のもくもくアニメ等 */
+    /* ------------------------------------------ */
+    
+    .yuge-wrap {
+        position: fixed;
+        top: 0; left: -8vw;
+        width: 36vw;
+        height: 100vh;
+    }
+    
+    @keyframes yuge-01-once-anime {
+        0% { width: 10vw; bottom: 17vh; top: auto; left: 18vw; opacity: 0.6; }
+        50% { opacity: 0.6; }
+        100% { width: 14vw; bottom: 50vh; top: auto; left: 17vw; opacity: 0; }
+    }
+    
+    @keyframes yuge-02-once-anime {
+        0% { width: 11vw; bottom: 17vh; top: auto; left: 20vw; opacity: 0.4; }
+        50% { opacity: 0.6; }
+        100% { width: 16vw; bottom: 51vh; top: auto; left: 21vw; opacity: 0; }
+    }
+    
+    @keyframes yuge-01-repeat-anime {
+        0% { width: 0; bottom: 16vh; top: auto; left: 22vw; opacity: 0; }
+        50% { opacity: 0.6; }
+        80% { width: 13vw; }
+        100% { width: 15vw; bottom: 50vh; top: auto; left: 21vw; opacity: 0; }
+    }
+    
+    @keyframes yuge-02-repeat-anime {
+        0% { width: 0; bottom: 15vh; top: auto; left: 19vw; opacity: 0; }
+        50% { opacity: 0.6; }
+        80% { width: 16vw; }
+        100% { width: 19vw; bottom: 52vh; top: auto; left: 20vw; opacity: 0; }
+    }
+    
+    @keyframes yuge-03-repeat-anime {
+        0% { width: 0; bottom: 19vh; top: auto; left: 22vw; opacity: 0; }
+        50% { opacity: 0.6; }
+        80% { width: 15vw; }
+        100% { width: 17vw; bottom: 54vh; top: auto; left: 18vw; opacity: 0; }
+    }
+    
+    @keyframes yuge-04-repeat-anime {
+        0% { width: 0; bottom: 17vh; top: auto; left: 23vw; opacity: 0; }
+        50% { opacity: 0.6; }
+        80% { width: 12vw; }
+        100% { width: 14vw; bottom: 50vh; top: auto; left: 18vw; opacity: 0; }
+    }
+    
+    @keyframes yuge-05-repeat-anime {
+        0% { width: 0; bottom: 15vh; top: auto; left: 20vw; opacity: 0; }
+        50% { opacity: 0.6; }
+        80% { width: 10vw; }
+        100% { width: 12vw; bottom: 47vh; top: auto; left: 18vw; opacity: 0; }
+    }
+    
+    @keyframes yuge-06-repeat-anime {
+        0% { width: 0; bottom: 15vh; top: auto;left: 21vw; opacity: 0; }
+        50% { opacity: 0.6; }
+        80% { width: 12vw; }
+        100% { width: 14vw; bottom: 48vh; top: auto; left: 22vw; opacity: 0; }
+    }
+    
+    /* ------------------------------------------ */
+    /* SECTION 1 無洗米とは */
+    /* ------------------------------------------ */
+    
+    .section-1 > h2 {
+        margin: 0;
+    }
+
+    .section-1 > div {
+        width: 50vw;
+        margin: 5vw 0 0 8vw;
+        padding: 0;
+        border-radius: 4vw;
+    }
+
+    .section-1 h3 {
+        position: absolute;
+        width: 6vw;
+        top: 3vw; left: 3vw;  
+        padding: 3vw 1vw;
+        font-size: 1.4vw;
+    }
+
+    .section-1 img {
+        width: 12vw;
+        margin: 7vw auto 1vw auto;
+    }   
+    
+    .section-1 p {
+        width: calc(100% - 6vw);
+        padding: 3vw;
+    }
+    
+    /* ------------------------------------------ */
+    /* SECTION 2 らくまいの良さ */
+    /* ------------------------------------------ */
+    
+    .section-2 table {
+        text-align: left;
+        width: 50vw;
+        margin: 4vw 0 0 8vw;
+        font-size: 1.4vw;
+        border-spacing: 1vw;
+    }
+    
+    .section-2 td {
+        padding: 2vw;
+        background-color: rgba(255,255,255,0.6);
+        border-radius: 1vw;
+    }
+    
+    .section-2 td:nth-child(odd) {
+        background-color: rgba(255,255,255,0.4);
+    }
+    
+    .section-2 th {
+        padding-left: 1vw;
+        width: 70%;
+    }
+
+    .section-2 th:nth-child(odd) {
+        width: 30%;
+    }
+
+    /* ------------------------------------------ */
+    /* SECTION 3 商品一覧 */
+    /* ------------------------------------------ */
+    
+    .section-3 {
+        background-color: #f39700;
+        padding-bottom: 2vw;
+        justify-content: center;
+    }
+    
+    .section-3 div {
+        width: 46vw;
+        margin: 4vw 0 0 8vw;
+        padding: 0 2vw 4vw 2vw;
+        border: none;
+        border-radius: 3vw;
+        background-image: linear-gradient(180deg, rgba(255,255,255,0.4) 0 10vw, rgba(255,255,255,0.8) 10vw 100%);
+    }
+    
+    .section-3 h3 {
+        display: block;
+        padding: 1vw 2vw;
+        font-size: 2.4vw;
+        color: white;
+    }
+    
+    .section-3 h4 {
+        margin: 0;
+        padding: 1vw 6vw;
+        font-size: 1.8vw;
+    }
+    
+    .section-3 > div > img {
+        width: 11vw;
+        margin: 3vw auto;
+    }
+    
+    .table-yellow {
+        width: 100%;
+        margin: 2vw 0;
+        font-size: 1.4vw;
+        border-spacing: 1vw;
+    }
+    
+    .table-yellow td {
+        padding: 2vw 1vw;
+        border-radius: 1vw;
+    }
+    
+    .table-yellow td:nth-child(odd) {
+        background-color: yellow;
+    }
+    
+    .table-yellow th {
+        width: 60%;
+        padding-left: 2vw;
+        padding: 1vw 4vw;
+        border-radius: 1vw;
+        color: white;
+        background-color: orange;
+    }
+    
+    .table-yellow th:nth-child(odd){
+        width: 40%;
+        padding: 0 4vw;
+    }
+    
+    .table-yellow.td-border td {
+        background-color: rgba(255,255,255,0.4);
+        border: 1px solid orange;
+    }
+    
+    .section-3 button {
+        width: 20vw;
+        margin: 2vw auto;
+        padding: 1.6vw 1vw;
+        font-size: 1.4vw;
+        border-radius: 1vw;
+        border: none;
+    }
+    
+    .section-3 > div > p {
+        width: auto;
+        font-size: 1.6vw;
+        padding: 1vw 10vw;
+    }
+    
+    .section-3 span {
+        display: inline-block;
+        font-size: 1.6vw;
+        padding: 1vw 0;
+    }
+    
+    /* ------------------------------------------ */
+    /* SECTION 4 クチコミ */
+    /* ------------------------------------------ */
+    
+    .sec4-wrap {
+        display: block;
+        padding-bottom: 2vw;
+    }
+    
+    .sec4-wrap div {
+        position: sticky;
+        top: 5vw;
+        display: block;
+        width: calc(100% - 17vw);
+        margin: 4vw 8vw;
+        padding: 4vw;
+        background-color: white;
+        border-radius: 1vw;
+        box-shadow: 3px 1vw rgba(0,0,0,0.2);
+    }
+    
+    .sec4-wrap h3, p {
+        width: 100%;
+    }
+
+    .section-4 > a {
+        text-align: center;
+        width: 16vw;
+        padding: 1vw 2vw;
+        margin-left: 35vw;
+        border-top: 3px solid rgba(255,255,255,0.4);
+        border-radius: 5vw;
+        box-shadow: 1px 0.4vw rgba(0,0,0,0.2);
+    }
+    
+    /* ------------------------------------------ */
+    /* FOOTER */
+    /* ------------------------------------------ */
+    
+    footer {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        margin-bottom :0;
+        text-align: right;
+        background-color: white;
+    }
+    
+    footer a {
+        display: block;
+        width: auto;
+        margin: 0;
+        padding: 2vw;
+        font-size: 1.2vw;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+
+    footer a:hover {
+        background-color: rgba(0,0,0,0.1);
+    }
+    
+    footer p {
+        width: auto;
+        padding: 2vw;
+        color: gray;
+        font-size: 1.2vw;
+    }
+    
+    /* ------------------------------------------ */
+    /* FIXED BAG */
+    /* ------------------------------------------ */
+    
+    .fixed-bag {
+        display: none;
+        position: fixed;
+        top: 6vw; left: 3vw;
+        transition: 1s;
+        z-index: 100;
+    }
+    
+    .kurt_btn {
+        background-color: rgba(255,255,255,0.3);
+        border-radius: 1vw;
+        box-shadow: 2px 0.6vw rgba(0,0,0,0.2);
+    }
+    
+    .fixed-bag img {
+        display: inline-block;
+        width: 2.6vw;
+        padding: 1.4vw 1.4vw 0.8vw 1.4vw;
+    }
+    
+    .fixed-bag span {
+        color: red;
+        font-size: 1.2vw;
+        padding: 1vw;
+    }
+    
+    .kurt_box > button {
+        display: none;
+        width: 22vw;
+        margin-top: 0.4vw;
+        padding: 0.4vw;
+        outline: none;
+        border: none;
+        border-radius: 0.4vw;
+        background-color: white;
+    }
+    
+    .kurt_box{
+        position: fixed;
+        width: 20vw;
+        top: 12vw; left: 3vw;
+        opacity: 0;
+        font-size: 1.2vw;
+        /* display: none; */
+    }
+    
+    
+    .kurt_anime_class {
+        animation-duration: 4s;
+        animation-name: kurt_anime;
+        animation-iteration-count: unset;
+        animation-fill-mode: forwards;
+    }
+    
+    @keyframes kurt_anime {
+        0% {
+            top: 12vw;
+        }
+        20% {
+            opacity: 1;
+        }
+        80% {
+            opacity: 1;
+        }
+        98% {
+            top: 12vw;
+            opacity: 0;
+        }
+        100%{
+            top: -100vw;
+            opacity: 0;
+        }
+    }
+    /* ------------------------------------------ */
+    /* SUBMIT.HTML----------------------------------------------- */
+    /* ------------------------------------------ */
+    /* SUBMIT-ITEM 注文内容 */
+    /* ------------------------------------------ */
+    
+    .submit-html {
+        width: 60%;
+        margin: 0 20vw;
+    }
+    
+    .submit-html label {
+        display: block;
+        width: 100%;
+    }
+    
+    .submit-html input {
+        width: 80%;
+        margin-bottom: 6vw;
+        padding: 1vw;
+        font-size: 2vw;
+        border: none;
+        background-color: rgba(255,255,255,0.4);
+        border-radius: 2vw;
+    }
+    
+    .submit-html input:focus {
+        outline: none;
+        background-color: rgba(255,255,255,0.8);
+    }
+    
+    .submit-html input[type='submit'] {
+        width: 60%;
+        margin: 2vw 20%;
+        padding: 1vw 0;
+        font-size: 2vw;
+        background-color: white;
+        border-radius: 2vw;
+    }
+    
+    .submit-item-sec > h1, .login-sec > h2{
+        width: 96%;
+        padding: 6vw 2% 0 2%; 
+        font-size: 6vw;
+    }
+    
+    .submit-item-sec > div {
+        width: 76%;
+        margin: 2vw 10%;
+        padding: 2vw 2%;
+        background-color: white;
+        border-radius: 2vw;
+    }
+    
+    .login-sec {
+        margin-top: 2vw; 
+        padding: 0;   
+    }
+
+    .submit-html h1 {
+        padding-bottom: 1vw;
+        font-size: 3vw;
+    }
+    
+    .submit-html h2 {
+        padding-bottom: 1vw;
+        font-size: 2.6vw;
+    }
+    
+    .login-sec a {
+        width: 100%;
+        margin: 2vw 0 4vw 0;
+        text-align: center;
+        color: white;
+        font-size: 1.8vw;
+        text-decoration: underline;
+        text-decoration-color: white;
+    }
+    
+    .submit-form {
+        width: 94%;
+        margin: 2vw 0;
+        padding: 0 3%;
+        background-color: white;
+    }
+
+    .submit-form h2 {
+        margin-bottom: 2vw;
+    }
+    
+    .submit-html input {
+        width: calc(90% - 2vw);
+        margin: 0 5% 2vw 5%;
+        border: 2px solid orange;
+    }
+
+    .submit-html label {
+        margin: 0 6%;
+    }
+    
+    .submit-form span {
+        margin: 0;
+        padding-right: 1vw;
+        color: pink;
+    }
+    
+    .submit-form a {
+        text-align: center;
+        width: 14vw;
+        margin-left: 38vw;
+        margin-bottom: 4vw;
+        padding: 1vw;
+        color: white;
+        background-color: orange;
+        border-radius: 1vw;
+    }
+}
