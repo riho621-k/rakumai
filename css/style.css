@@ -3,8 +3,8 @@
 /*---------------------------*/
 
 * {
-    padding: 0;
-    margin: 0;
+    padding:0;
+    margin:0;
     text-decoration: none;
     color: inherit;
 }
@@ -21,7 +21,7 @@ section {
 
 @font-face {
     font-family: 'umeboshi';
-    src: url('/fonts/umeboshi_.ttf');
+    src: url('../fonts/umeboshi_.ttf');
 }
 
 p , h1, h2, h3, h4, a ,label ,table ,select ,button{
@@ -452,7 +452,7 @@ select {
     border: 0.4vw dotted #f39700;
     border-top: 4px solid #f39700;
     border-radius: 8vw;
-    background-image: linear-gradient(180deg, #f39700 0 20vw, rgba(255,255,255,0.4) 20vw 100%);
+    background-image: linear-gradient(180deg, #f39700 0 22vw, rgba(255,255,255,0.4) 22vw 100%);
 }
 
 .section-3 h3 {
@@ -1079,6 +1079,7 @@ footer p {
         margin: 2vw 0;
         font-size: 1.4vw;
         border-spacing: 1vw;
+        table-layout: fixed;
     }
     
     .table-yellow td {
@@ -1091,8 +1092,6 @@ footer p {
     }
     
     .table-yellow th {
-        width: 60%;
-        padding-left: 2vw;
         padding: 1vw 4vw;
         border-radius: 1vw;
         color: white;
@@ -1100,7 +1099,6 @@ footer p {
     }
     
     .table-yellow th:nth-child(odd){
-        width: 40%;
         padding: 0 4vw;
     }
     
