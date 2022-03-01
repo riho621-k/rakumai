@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>らくまい/トップ</title>
+</head>
+<body>
+    <header>
+        <button class='sp-menu-btn'>
+            <span class='sp-menu-line'></span>
+        </button>
+        <div class='sp-menu'>
+            <a href="index.html">トップへ</a>
+            <a href="#jump_sec1">無洗米とは</a>
+            <a href="#jump_item">商品一覧</a>
+        </div>
+        <div class='pc-menu'>
+            <h2>無洗米のRAKUMAI</h2>
+            <a href="index.html">トップへ</a>
+            <a href="#jump_sec1">無洗米とは</a>
+            <a href="#jump_item">商品一覧</a>
+        </div>
+    </header>    
+
+    <!-- もくもくを動かすスクロールでお箸がアップになる -->
+    <section class='start-section'>
+        <div class='start_box'>
+            <img class='img-top' src="img/top-01.png" alt="">
+            <img class='img-top' src="img/top-02.png" alt="">
+
+            <img class='img-line-wh-01' src="img/line-wh-01.png" alt="">
+            <img class='img-line-wh-02' src="img/line-wh-02.png" alt="">
+            
+            <img class='img-tubu-02' src="img/tubu-02.png" alt="">
+
+            <h1><img class='img-title' src='img/title02.png' alt='無洗米のらくまい'></h1>
+            <h2>無洗米の</h2>
+            <h3>RAKUMAI</h3>
+
+            <img class='img-tyawan' src="img/tyawan.png" alt="">
+            <img id='hasi-id' class='img-hasi' src="img/hasi.svg" alt="">
+        </div>
+        <div class='yuge-wrap'>
+            <img class='img-yuge-01-once' src="img/yuge-01.png" alt="">
+            <img class='img-yuge-02-once' src="img/yuge-02.png" alt="">
+            
+            <img class='img-yuge-01-repeat' src="img/yuge-01.png" alt="">
+            <img class='img-yuge-02-repeat' src="img/yuge-02.png" alt="">
+            <img class='img-yuge-03-repeat' src="img/yuge-03.png" alt=""> 
+            <img class='img-yuge-04-repeat' src="img/yuge-01.png" alt="">
+            <img class='img-yuge-05-repeat' src="img/yuge-02.png" alt=""> 
+            <img class='img-yuge-06-repeat' src="img/yuge-03.png" alt="">
+        </div>
+    </section>
+
+    <!-- 無洗米について簡単な紹介と絵 -->
+    <section class='section-1 section-right' id='jump_sec1'>
+        <h2 class='yellow-h2'>無洗米とは</h2>
+        <div>
+            <h3>簡単!</h3>
+            <img src="img/tyawan.png" alt="">
+            <p>大量のお水を使って洗わなくても美味しく食べられるように機械によって肌ぬかを取り除いてあり自分で洗う手間がいらないのが無洗米</p>
+        </div>
+        <div>
+            <h3>エコ</h3>
+            <img src="img/tyawan.png" alt="">
+            <p>そのためお水を節約できてとってもエコ。普通のお米と比べると10分の1以下のお水で済むのです。</p>
+        </div>
+        <div>
+            <h3>最近では</h3>
+            <img src="img/tyawan.png" alt="">
+            <p>お釜にお米とお水を入れるだけで済むので時短にもなり、若い層の家庭では一般的になってきました。</p>
+        </div>
+    </section>
+
+    <section class='section-2 section-right'>
+        <h2 class='yellow-h2'>らくまいの良さ</h2>
+        <div>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>無洗米の<br class='pc-none-br'>イメージ</th>
+                        <th>らくまい無洗米</th>
+                    </tr>
+                    <tr>
+                        <td>値段が少し高い</td>
+                        <td>AI農家と天候に左右されない地下栽培によって価格を抑え、定期購入に向いている</td>
+                    </tr>
+                    <tr>
+                        <td>栄養がなさそう</td>
+                        <td>らくまいの栄養価は普通のお米比べても大差なく無洗米技術の向上により無駄に洗いすぎていない</td>
+                    </tr>
+                    <tr>
+                        <td>小粒な気がする</td>
+                        <td>もともと大粒のらくまいは機械で無洗米化しても普通のお米と変わらない大きさ</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class='section-3 section-right' id='jump_item'>
+        <h2 class='yellow-h2'>商品一覧</h2>
+        <p>当ページからお買い求めいただけます！</p>
+        <div>
+            <h3>まずはサンプルを<br>食べてください！</h3>
+            <img src="img/tyawan.png" alt="">
+            <h4>らくまい無洗米 1合×2袋<br>&<br>最後に入れるお水1本付き<br><span>1世帯様　1度まで購入可能です</span></h4>
+            <p>500円(送料無料)</p>
+            <select name='sample_item' id='sample_item_id'>
+                <option value="0">0</option>
+                <option value="1">1</option>
+            </select>
+            <button id='sample_item_btn_id' onclick="kurtCheck('sample_item')">カゴに入れる</button>
+        </div>
+        
+        <div>
+            <h3>月に一度の<br>定期注文だとお得！</h3>
+            <img src="img/tyawan.png" alt="">
+            <h4>1kg単位で承ります！<span>1kg増えるごとに1kg当たりの値段を10円引き!(30kgまでお値引き)</span></h4>
+            <h5>お値引き表</h5>
+            <table class='table-yellow'>
+                <tbody>
+                    <tr>
+                        <th>kg</th>
+                        <th> お値段 / 1kgあたり</th>
+                    </tr>
+
+                    <script>
+                        //デフォルトの金額を変えるだけで表の値段が変えられます
+
+                        let default_price = 1200; //1kg当たりの値段
+                        let discount = 10; //1kgに対する値引き
+                        let price = 0;
+                        let kg = 1;
+
+                        price = default_price;
+                        document.write("<tr><td>"+kg+"kg</td>");
+                        document.write("<td>"+price.toLocaleString()+"円 / "+price.toLocaleString()+"円</td>");
+                        
+                        function write_price(kg) {
+                            price = default_price - (kg * discount);
+                            document.write("<tr><td>"+kg+"kg</td>");
+                            document.write("<td>"+ (price * kg).toLocaleString()+"円 / "+price.toLocaleString()+"円</td>");
+                        }
+
+                        write_price(3);
+                        write_price(5);
+                        write_price(10);
+                        write_price(30);
+                    </script>
+
+                </tbody>
+            </table>
+            <select name="discount_item" id="discount_item_id">
+                <option value="0">0kg     0円</option>
+                <script>
+                    document.write('<option value="1">1kg '+ default_price +'円</option>')
+                    price = 0;
+                    for (let c = 2; 31 > c; c++) {
+
+                        price = c * (default_price - (c * discount));
+                        document.write('<option value="'+c+'">' +c+'kg'+' - ' + price.toLocaleString() + '円</option>' );
+                    }
+                </script>
+            </select>
+            <button id='discount_item_btn_id' onclick="kurtCheck('discount_item')">カゴに入れる</button>
+        </div>
+
+        <div>
+            <h3>通常注文<br>
+                <script>
+                    document.write(`1kg ${default_price} 円`);
+                </script>
+            </h3>
+            <img src='img/tyawan.png'>
+            <p>1kg単位でご注文承っております</p>
+            <select name="normal_item" id="normal_item_id">
+                <option value="0">0kg     0円</option>
+                <script>
+                    price = 0;
+                    for (let c = 1; 31 > c; c++) {
+
+                        price = c * default_price;
+                        document.write('<option value="'+c+'">' +c+'kg'+' - ' + price.toLocaleString() + '円</option>' );
+                    }
+                </script>
+            </select>
+            <button id='normal_item_btn_id' onclick="kurtCheck('normal_item')">カゴに入れる</button>
+        </div>
+
+        <div>
+            <h3>究極に楽すぎる<br>炊飯器はいかがですか?</h3>
+            <img src='img/tyawan.png'>
+            <h4>無洗米用に設計された自動炊飯器！毎日好きな時間に炊きあがる!</h4>
+            <p>お米とお水をそれぞれ専用ボトルに入れておけば1日2合で14日間自動運転！<br><span>釜は自分で洗浄する必要あり</span></p>
+            <p>スマホアプリと連動していて細かい日時を設定できます！</p>
+            <p>もともと使っていた炊飯器があれば下取りでお米をプレゼント<br><span>(最大5KG)</span></p>
+            
+            <h4>お釜2個入りなど<br>豪華セットでお届け！<br>お値段69,800円</h4>
+            <table class='table-yellow td-border'>
+                <tr>
+                    <th>本体</th>
+                    <td>縦100cm/奥行き40cm/横幅48cm</td>
+                </tr>
+                <tr>
+                    <th>お釜</th>
+                    <td>5合だき × 2つ</td>
+                </tr>
+                <tr>
+                    <th>本体内蔵<br>米びつ</th>
+                    <td>5kg収納可能</td>
+                </tr>
+                <tr>
+                    <th>本体内蔵<br>ボトル</th>
+                    <td>2リットル容量</td>
+                </tr>
+                <tr>
+                    <th>らくまい</th>
+                    <td>5kg　× 2袋</td>
+                </tr>
+                <tr>
+                    <th>最後に入れるお水</th>
+                    <td>2リットル × 3本</td>
+                </tr>
+            </table>
+            <select name="suihanki_item" id="suihanki_item_id">
+                <option value="0">0</option>
+                <option value="1">1個 下取りなし /69,800円</option>
+                <option value="2">1個 下取りあり /69,800円</option>
+            </select>
+            <button id='suihanki_item_btn_id' onclick="kurtCheck('suihanki_item')">カゴに入れる</button>
+        </div>
+
+        <div>
+            <h3>最後に入れる<br>お水とは</h3>
+            <img src='img/tyawan.png'>
+            <p>度々登場している最後に入れるお水とは？！</p>
+            <p>水道水でももちろん美味しく炊けるけどもっと美味しく栄養を気にする方におすすめ！</p>
+            <p>玄米、雑穀を入れた時と同等の栄養素が取れる！</p>
+            <p>炊き上がりのふっくら感がUP冷めても美味しい！</p>
+            <select name="water_item" id="water_item_id">
+                <script>
+                    let water = 500
+                    document.write(`<option value="0">0ml - 0円</option>`);
+                    for (let c = 1; 12 > c; c++) {
+                        price = c * water;
+                        document.write('<option value="'+c+'">' +price.toLocaleString()+'ml'+' - ' + price.toLocaleString() + '円</option>' );
+                    }
+                </script>
+            </select>
+            <button id='water_item_btn_id' onclick="kurtCheck('water_item')">カゴに入れる</button>
+        </div>
+    </section>
+
+    <section class='section-4 section-right'>
+        <h2 class='yellow-h2'>お客様からの温かいお言葉</h2>
+        <div class='sec4-wrap'>
+            <div>
+                <h3>無洗米最高！</h3>
+                <img src="" alt="">
+                <p>神奈川県横浜市/39歳/女性</p>
+                <p>私は今まで普通のお米しか食べたことがなかったのですが...</p>
+            </div>
+            <div>
+                <h3>妻にプレゼントで</h3>
+                <img src="" alt="">
+                <p>東京都台東区/28歳/女性</p>
+                <p>妻にプレゼントしたところ大好評だったので今から母親にも注文しようと思います！</p>
+            </div>
+            <div>
+                <h3>妻にプレゼントで</h3>
+                <img src="" alt="">
+                <p>東京都台東区/28歳/女性</p>
+                <p>妻にプレゼントしたところ大好評だったので今から母親にも注文しようと思います！</p>
+            </div>
+            <div>
+                <h3>妻にプレゼントで</h3>
+                <img src="" alt="">
+                <p>東京都台東区/28歳/女性</p>
+                <p>妻にプレゼントしたところ大好評だったので今から母親にも注文しようと思います！</p>
+            </div>
+        </div>
+        <a href="end.html">もっとみる</a>
+    </section>
+
+    <section class='fixed-bag' id='fixed_kurt_id'>
+        <a href='submit.html' class='kurt_btn'><img src='img/cart-shopping-solid.svg'></a>
+        <div class='kurt_box kurt_anime_class' id='kurt_box_id'>
+            <button id='sample_item_kurt_id'>サンプル　1つ<span>×</span></button>
+            <button id='discount_item_kurt_id'>お得な定期注文<span>×</span></button>
+            <button id='normal_item_kurt_id'><span>×</span></button>
+            <button id='suihanki_item_kurt_id'><span>×</span></button>
+            <button id='water_item_kurt_id'><span>×</span></button>
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <a href="index.html">トップへ</a>
+            <a href="#jump_sec1">無洗米とは</a>
+            <a href="#jump_item">商品一覧</a>
+        </div>
+        <p>@2022 Riho Isobe</p>
+    </footer>
+    <script src="js/js.js"></script>
+</body>
+</html>
