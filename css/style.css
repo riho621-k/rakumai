@@ -779,16 +779,10 @@ footer p {
     
     select {
         display: block;
-        text-align: center;
         padding: 1vw;
         margin: 1vw auto 0 auto;
         font-size: 1.4vw;
-        border: none;
         border-radius: 1vw;
-        outline:none;
-        appearance: none;
-        cursor: pointer;
-        background-color: rgba(150,100,0,0.2);
     }
 
     .yellow-h2 {
@@ -797,7 +791,6 @@ footer p {
         margin: 0;
         padding: 0.2vw 2vw;
         font-size: 2.4vw;
-        color: white;
         border-left: 1vw solid yellow;
         text-shadow: 1px 3px  rgba(0,0,0,0.2);
         z-index: 99;
@@ -814,8 +807,6 @@ footer p {
         display: none;
     }
 
-    /* 'Asebi Mincho' 'cinecaption' */
-    
     /* ------------------------------------------ */
     /* HEADER */
     /* ------------------------------------------ */
@@ -862,7 +853,6 @@ footer p {
     
     .start-section {
         position: fixed;
-        top: 0;
         width: 36vw;
         height: 100vh;
         z-index: 80;
@@ -985,11 +975,9 @@ footer p {
         width: 50vw;
         margin: 5vw 0 0 8vw;
         padding: 0;
-        border-radius: 4vw;
     }
 
     .section-1 h3 {
-        position: absolute;
         width: 6vw;
         top: 3vw; left: 3vw;  
         padding: 3vw 1vw;
@@ -1011,7 +999,6 @@ footer p {
     /* ------------------------------------------ */
     
     .section-2 table {
-        text-align: left;
         width: 50vw;
         margin: 4vw 0 0 8vw;
         font-size: 1.4vw;
@@ -1019,22 +1006,11 @@ footer p {
     }
     
     .section-2 td {
-        padding: 2vw;
-        background-color: rgba(255,255,255,0.6);
         border-radius: 1vw;
-    }
-    
-    .section-2 td:nth-child(odd) {
-        background-color: rgba(255,255,255,0.4);
     }
     
     .section-2 th {
         padding-left: 1vw;
-        width: 70%;
-    }
-
-    .section-2 th:nth-child(odd) {
-        width: 30%;
     }
 
     /* ------------------------------------------ */
@@ -1060,7 +1036,6 @@ footer p {
         display: block;
         padding: 1vw 2vw;
         font-size: 2.4vw;
-        color: white;
     }
     
     .section-3 h4 {
@@ -1075,7 +1050,6 @@ footer p {
     }
     
     .table-yellow {
-        width: 100%;
         margin: 2vw 0;
         font-size: 1.4vw;
         border-spacing: 1vw;
@@ -1087,24 +1061,14 @@ footer p {
         border-radius: 1vw;
     }
     
-    .table-yellow td:nth-child(odd) {
-        background-color: yellow;
-    }
-    
     .table-yellow th {
         padding: 1vw 4vw;
         border-radius: 1vw;
         color: white;
-        background-color: orange;
     }
     
     .table-yellow th:nth-child(odd){
         padding: 0 4vw;
-    }
-    
-    .table-yellow.td-border td {
-        background-color: rgba(255,255,255,0.4);
-        border: 1px solid orange;
     }
     
     .section-3 button {
@@ -1113,7 +1077,6 @@ footer p {
         padding: 1.6vw 1vw;
         font-size: 1.4vw;
         border-radius: 1vw;
-        border: none;
     }
     
     .section-3 > div > p {
@@ -1173,7 +1136,6 @@ footer p {
         padding: 0;
         margin-bottom :0;
         text-align: right;
-        background-color: white;
     }
     
     footer a {
@@ -1182,7 +1144,6 @@ footer p {
         margin: 0;
         padding: 2vw;
         font-size: 1.2vw;
-        border-bottom: 1px solid rgba(0,0,0,0.1);
     }
 
     footer a:hover {
@@ -1192,7 +1153,6 @@ footer p {
     footer p {
         width: auto;
         padding: 2vw;
-        color: gray;
         font-size: 1.2vw;
     }
     
@@ -1201,57 +1161,35 @@ footer p {
     /* ------------------------------------------ */
     
     .fixed-bag {
-        display: none;
-        position: fixed;
         top: 6vw; left: 3vw;
-        transition: 1s;
         z-index: 100;
     }
     
     .kurt_btn {
         background-color: rgba(255,255,255,0.3);
-        border-radius: 1vw;
-        box-shadow: 2px 0.6vw rgba(0,0,0,0.2);
     }
     
     .fixed-bag img {
-        display: inline-block;
         width: 2.6vw;
         padding: 1.4vw 1.4vw 0.8vw 1.4vw;
     }
     
     .fixed-bag span {
-        color: red;
         font-size: 1.2vw;
-        padding: 1vw;
     }
     
     .kurt_box > button {
-        display: none;
         width: 22vw;
         margin-top: 0.4vw;
         padding: 0.4vw;
-        outline: none;
-        border: none;
         border-radius: 0.4vw;
-        background-color: white;
     }
     
     .kurt_box{
-        position: fixed;
         width: 20vw;
         top: 12vw; left: 3vw;
-        opacity: 0;
         font-size: 1.2vw;
         /* display: none; */
-    }
-    
-    
-    .kurt_anime_class {
-        animation-duration: 4s;
-        animation-name: kurt_anime;
-        animation-iteration-count: unset;
-        animation-fill-mode: forwards;
     }
     
     @keyframes kurt_anime {
@@ -1286,7 +1224,6 @@ footer p {
     
     .submit-html label {
         display: block;
-        width: 100%;
     }
     
     .submit-html input {
@@ -1294,14 +1231,7 @@ footer p {
         margin-bottom: 6vw;
         padding: 1vw;
         font-size: 2vw;
-        border: none;
-        background-color: rgba(255,255,255,0.4);
         border-radius: 2vw;
-    }
-    
-    .submit-html input:focus {
-        outline: none;
-        background-color: rgba(255,255,255,0.8);
     }
     
     .submit-html input[type='submit'] {
@@ -1343,20 +1273,14 @@ footer p {
     }
     
     .login-sec a {
-        width: 100%;
         margin: 2vw 0 4vw 0;
-        text-align: center;
-        color: white;
         font-size: 1.8vw;
-        text-decoration: underline;
-        text-decoration-color: white;
     }
     
     .submit-form {
         width: 94%;
         margin: 2vw 0;
         padding: 0 3%;
-        background-color: white;
     }
 
     .submit-form h2 {
@@ -1366,7 +1290,6 @@ footer p {
     .submit-html input {
         width: calc(90% - 2vw);
         margin: 0 5% 2vw 5%;
-        border: 2px solid orange;
     }
 
     .submit-html label {
@@ -1385,8 +1308,6 @@ footer p {
         margin-left: 38vw;
         margin-bottom: 4vw;
         padding: 1vw;
-        color: white;
-        background-color: orange;
         border-radius: 1vw;
     }
 }
