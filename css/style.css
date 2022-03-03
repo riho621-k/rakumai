@@ -11,7 +11,9 @@
 
 body {
     width: 100vw;
-    background-color: #f39700;
+    /* rgb(243,151,0) */
+    background-color: #f39700; 
+    /* background-color: rgb(241,120,75); */
     overflow-x: hidden;
 }
 
@@ -72,6 +74,10 @@ select {
     font-size: 6vw;
     color: white;
     border-left: 1.4vw solid yellow;
+}
+
+.text-l {
+    text-align: left;
 }
 
 /* 'Asebi Mincho' 'cinecaption' */
@@ -471,34 +477,56 @@ select {
     margin: 12vw auto;
 }
 
-.table-yellow {
+.section-3 table {
     width: 100%;
     margin: 4vw 0;
     font-size: 4.2vw;
     border-spacing: 2vw;
 }
 
-.table-yellow td {
+.table-discount th {
+    width: 50%;
+    padding: 2vw;
+    border-radius: 3vw;
+    background-color: rgba(243,151,0,0.8);
+}
+
+.table-discount th:nth-child(odd) {
+    width: 20%;
+    background-color: rgba(255,255,255,0.8);
+}
+
+.table-discount td {
+    padding: 2vw;
+    border-radius: 3vw;
+    background-color: rgba(243,151,0,0.2);
+}
+
+.table-discount td:nth-child(odd) {
+    background-color: rgba(255,255,255,0.4);
+}
+
+.table-white td {
     padding: 2vw;
     border-radius: 3vw;
 }
 
-.table-yellow td:nth-child(odd) {
+.table-white td:nth-child(odd) {
     background-color: yellow;
 }
 
-.table-yellow th {
+.table-white th {
     width: 60%;
-    padding-left: 2vw;
+    padding: 2vw;
     border-radius: 3vw;
     background-color: orange;
 }
 
-.table-yellow th:nth-child(odd){
+.table-white th:nth-child(odd){
     width: 40%;
 }
 
-.table-yellow.td-border td {
+.table-white.td-border td {
     background-color: rgba(255,255,255,0.4);
     border: 1px solid orange;
 }
@@ -522,8 +550,8 @@ select {
 }
 
 .section-3 > div > p {
-    width: calc(100% - 8vw);
-    padding: 4vw;
+    width: calc(100% - 16vw);
+    padding: 4vw 8vw;
 }
 
 .section-3 span {
@@ -1048,27 +1076,62 @@ footer p {
         width: 11vw;
         margin: 3vw auto;
     }
-    
-    .table-yellow {
+
+    /*  */
+
+    .section-3 table {
+        width: 46vw;
         margin: 2vw 0;
-        font-size: 1.4vw;
-        border-spacing: 1vw;
-        table-layout: fixed;
+        font-size: 1.6vw;
+        border-spacing: 0.5vw;
+        border-radius: 2vw;
     }
     
-    .table-yellow td {
-        padding: 2vw 1vw;
+    .table-discount th {
+        width: 30vw;
+        padding: 1.5vw 1vw;
+        background-color: rgba(243,151,0,0.8);
         border-radius: 1vw;
     }
     
-    .table-yellow th {
-        padding: 1vw 4vw;
-        border-radius: 1vw;
-        color: white;
+    .table-discount th:nth-child(odd) {
+        width: 12vw;
+        background-color: rgba(255,255,255,0.8);
     }
     
-    .table-yellow th:nth-child(odd){
-        padding: 0 4vw;
+    .table-discount td {
+        padding: 1.5vw 1vw;
+        background-color: rgba(243,151,0,0.2);
+        border-radius: 1vw;
+    }
+    
+    .table-discount td:nth-child(odd) {
+        background-color: rgba(255,255,255,0.4);
+    }
+
+    .table-white td {
+        padding: 1.6vw 1vw;
+        border-radius: 1vw;
+    }
+    
+    .table-white td:nth-child(odd) {
+        background-color: yellow;
+    }
+    
+    .table-white th {
+        width: 24vw;
+        padding: 1.6vw 1vw;
+        border-radius: 1vw;
+        background-color: orange;
+    }
+    
+    .table-white th:nth-child(odd){
+        width: 18vw;
+    }
+    
+    .table-white.td-border td {
+        background-color: rgba(255,255,255,0.4);
+        border: 1px solid orange;
     }
     
     .section-3 button {
