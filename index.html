@@ -122,7 +122,7 @@
             <img src="img/tyawan.png" alt="">
             <h4>1kg単位で承ります！<span>1kg増えるごとに1kg当たりの値段を10円引き!(30kgまでお値引き)</span></h4>
             <h5>お値引き表</h5>
-            <table class='table-yellow'>
+            <table class='table-discount'>
                 <tbody>
                     <tr>
                         <th>kg</th>
@@ -139,12 +139,12 @@
 
                         price = default_price;
                         document.write("<tr><td>"+kg+"kg</td>");
-                        document.write("<td>"+price.toLocaleString()+"円 / "+price.toLocaleString()+"円</td>");
+                        document.write("<td>"+price.toLocaleString()+"円 / "+price.toLocaleString()+"円</td></tr>");
                         
                         function write_price(kg) {
                             price = default_price - (kg * discount);
                             document.write("<tr><td>"+kg+"kg</td>");
-                            document.write("<td>"+ (price * kg).toLocaleString()+"円 / "+price.toLocaleString()+"円</td>");
+                            document.write("<td>"+ (price * kg).toLocaleString()+"円 / "+price.toLocaleString()+"円</td></tr>");
                         }
 
                         write_price(3);
@@ -196,12 +196,12 @@
             <h3>究極に楽すぎる<br>炊飯器はいかがですか?</h3>
             <img src='img/tyawan.png'>
             <h4>無洗米用に設計された自動炊飯器！毎日好きな時間に炊きあがる!</h4>
-            <p>お米とお水をそれぞれ専用ボトルに入れておけば1日2合で14日間自動運転！<br><span>釜は自分で洗浄する必要あり</span></p>
-            <p>スマホアプリと連動していて細かい日時を設定できます！</p>
-            <p>もともと使っていた炊飯器があれば下取りでお米をプレゼント<br><span>(最大5KG)</span></p>
+            <p class='text-l'>お米とお水をそれぞれ専用ボトルに入れておけば1日2合で14日間自動運転！(釜は自分で洗浄する必要あり)</p>
+            <p class='text-l'>スマホアプリと連動していて細かい日時を設定できます！</p>
+            <p class='text-l'>もともと使っていた炊飯器があれば下取りでお米をプレゼント(最大5KG)</p>
             
             <h4>お釜2個入りなど<br>豪華セットでお届け！<br>お値段69,800円</h4>
-            <table class='table-yellow td-border'>
+            <table class='table-white td-border'>
                 <tr>
                     <th>本体</th>
                     <td>縦100cm/奥行き40cm/横幅48cm</td>
@@ -238,10 +238,10 @@
         <div>
             <h3>最後に入れる<br>お水とは</h3>
             <img src='img/tyawan.png'>
-            <p>度々登場している最後に入れるお水とは？！</p>
-            <p>水道水でももちろん美味しく炊けるけどもっと美味しく栄養を気にする方におすすめ！</p>
-            <p>玄米、雑穀を入れた時と同等の栄養素が取れる！</p>
-            <p>炊き上がりのふっくら感がUP冷めても美味しい！</p>
+            <p class='text-l'>度々登場している最後に入れるお水とは？！</p>
+            <p class='text-l'>水道水でももちろん美味しく炊けるけどもっと美味しく栄養を気にする方におすすめ！</p>
+            <p class='text-l'>玄米、雑穀を入れた時と同等の栄養素が取れる！</p>
+            <p class='text-l'>炊き上がりのふっくら感がUP冷めても美味しい！</p>
             <select name="water_item" id="water_item_id">
                 <script>
                     let water = 500
