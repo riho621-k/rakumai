@@ -4,9 +4,6 @@ document.querySelector('.sp-menu-btn').addEventListener('click', function(){
     document.querySelector('.sp-menu-line').classList.toggle('is-active');
 });
 
-//メニューは上から降ってくる様にする
-
-//スマホ用メニューのボタンを押された時
 
 //お箸拡大
 var hasi = document.querySelector('.img-hasi');
@@ -16,10 +13,8 @@ var vw = window.innerWidth / 100;
 window.addEventListener("scroll", scroll);
 function scroll() { 
 
-    //submit.htmlの時は呼び出されないようにしないといけない
     
     var y = window.scrollY;
-    //console.log(y);
 
     //お箸処理
     if (y >= 800) { //これ以上は消す
